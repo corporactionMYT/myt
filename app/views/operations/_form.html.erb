@@ -1,4 +1,4 @@
-<%= simple_form_for @operation, :html => { :class => 'form-horizontal' } do |f| %>
+<%= simple_form_for [@area,@operation], :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :name %>
   <%= error_span(@operation[:name]) %>
   <%= f.input :description %>
@@ -12,5 +12,5 @@
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                operations_path, :class => 'btn btn-default' %>
+               area_operations_path(@area), :class => 'btn btn-default' %>
 <% end %>

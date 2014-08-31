@@ -4,7 +4,7 @@ class OperationsController < ApplicationController
   # GET /operations
   # GET /operations.json
   def index
-    @operations = @area.operation.all
+    @operations = @area.operations.all
   end
 
   # GET /operations/1
